@@ -1,0 +1,57 @@
+ Bài 1: Tìm cách gõ lệnh
+- Cài đặt ubuntu server trên máy vật lý
+- Sử dụng virtual box cài đặt ubuntu server
+- Truy cập từ xa qua ssh
+- Sử dụng xterm
+- 
+
+
+Bài 2:Làm quen với lệnh
+cd: thay đổi thư mục làm việc hiện tại
+pwd: in ra tên đường dẫn thư mục làm việc hiện tại
+ls: liệt kê ra các thư mục con
+mkdir: tạo thư mục mới
+rmdir: xóa thư mục
+cat: nối các file và in ra
+touch: cập nhật thời gian chỉnh sửa cho tệp là thời gian hiện tại
+rm: xóa file hoặc thư mục
+cp: sao chép file hoặc thư mục
+mv: di chuyển hoặc đổi tên file
+
+grep: In ra các dòng phù hợp mới một pattern
+cut: In các phần đã chọn của các dòng từ mỗi file
+join: Ghép từng cặp dòng của mỗi file và in ra
+head: In ra các dòng đầu tiên của mỗi file 
+tail: In ra các dòng cuối của mỗi file 
+wc: In ra số dòng, số từ, số byte của file
+sed: trình chỉnh sửa luồng để lọc và chuyển đổi văn bản
+tr: biến đổi, chinh sửa ký tự
+tee: đọc từ đầu vào tiêu chuẩn và ghi vào đầu ra chuẩn và file
+
+tar: công cụ nén file
+gzip: nén và giải nén file
+bzip2: nén file
+
+which: tìm vị trí của một lệnh
+whatis: in ra 1 dòng của trang hướng dẫn của một lệnh
+apropos: tìm kiếm và miêu tả trang hướng dẫn của một lệnh
+
+Bài 3: Tạo cấu trúc thư mục đơn giản
+mkdir -p /lab/{data,project}
+cp /etc/passwd /lab/data/file1.txt
+cp /etc/passwd /lab/data/file2.txt
+
+Bài 4: Xóa, di chuyển, sao chép file và thư mục
+cp -r /lab /backup
+cp /etc/passwd /lab/project/more1.txt
+cp /etc/passwd /lab/project/more2.txt
+mv -f /lab/ /backup
+
+Bài 5: Tập hợp, nén, giải nén thư mục
+sudo tar -cjf  /root/backup.tar.bz2 /backup
+. . . 
+
+
+Bài 6: Lọc dữ liệu dạng đơn giản
+ls / | grep .txt$
+ls / | grep ^dat
